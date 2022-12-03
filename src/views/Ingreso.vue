@@ -79,6 +79,7 @@ export default {
         .catch((error) => {
           if (error.response.status == 422) {
             alert(error.response.data.message);
+            console.log(error)
           }else{
             console.log(error)
           }
