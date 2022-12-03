@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <br>
       <v-card class="mx-auto" max-width="600">
         <v-toolbar dark color="#1f2137">
         <v-toolbar-title class="mx-auto display-1"
