@@ -43,7 +43,18 @@ export default {
   }),
   methods: {
     guardarIngreso() {
-
+        this.axios
+          .post("ingreso", {
+            codigo: this.codigo,            
+          })
+          .then((response) => {
+              alert("Ingreso exitoso " + "\n Fecha de ingreso: " + response.data.fecha_ingreso + "\n Colaborador: " + response.data.colaborador.nombre  );
+          })
+          .catch((error) => {
+            if(error.response.status == 422){
+              alert(error.response.data.message);
+            }            
+          });
     },
   },
 };
